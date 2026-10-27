@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVENGERS CLUB // The Ultimate Campus Recruitment Experience</title>
+  <meta name="description" content="Earth Doesn't Need Another Hero. It Needs a Team. Join the Avengers Club — the premier collegiate innovation, technology, and leadership community.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2307090F' stroke='%2300D9FF' stroke-width='6'/><polygon points='50,15 78,75 62,75 56,60 44,60 38,75 22,75' fill='%2300D9FF'/><line x1='35' y1='52' x2='65' y2='52' stroke='%2307090F' stroke-width='6'/></svg>">
+</head>
+<body>
+
+  <!-- Holographic Canvas Particle Network & Ambient Backdrops -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       SECTION 2: NAVIGATION — THE COMMAND BAR
+       ========================================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <!-- Left: Logo & Wordmark -->
+      <a href="#home" class="nav-brand" aria-label="Avengers Club Home">
+        <div class="brand-emblem-wrap">
+          <svg class="brand-reactor-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="44" stroke="#00D9FF" stroke-width="3" stroke-dasharray="6 4" opacity="0.8"/>
+            <circle cx="50" cy="50" r="32" stroke="#65F6FF" stroke-width="2"/>
+            <polygon points="50,18 76,78 62,78 55,62 45,62 38,78 24,78" fill="#00D9FF"/>
+            <polygon points="46,54 54,54 50,42" fill="#07090F"/>
+            <circle cx="50" cy="50" r="6" fill="#65F6FF"/>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-wordmark">AVENGERS<span>CLUB</span></span>
+          <span class="brand-designation">CAMPUS INITIATIVE</span>
+        </div>
+      </a>
+
+      <!-- Center: Nav Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#mission" class="nav-link">OUR MISSION</a>
+        <a href="#team" class="nav-link">THE TEAM</a>
+        <a href="#initiatives" class="nav-link">INITIATIVES</a>
+        <a href="#recruitment-form-section" class="nav-link">JOIN THE INITIATIVE</a>
+      </nav>
+
+      <!-- Right: Action Controls -->
+      <div class="nav-actions">
+        <!-- Web Audio FX Mute/Unmute Toggle -->
+        <button type="button" class="sound-toggle-btn" id="sound-toggle-btn" aria-pressed="true" aria-label="Toggle Sound Effects">
+          <div class="sound-waves" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span id="sound-status-label">SFX: ON</span>
+        </button>
+
+        <!-- Enlist Glowing CTA Button -->
+        <a href="#recruitment-form-section" class="btn btn-enlist-glow">
+          <span>ENLIST NOW</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link"><span>00</span> HOME</a></li>
+        <li><a href="#mission" class="mobile-nav-link"><span>01</span> OUR MISSION</a></li>
+        <li><a href="#team" class="mobile-nav-link"><span>02</span> THE TEAM</a></li>
+        <li><a href="#initiatives" class="mobile-nav-link"><span>03</span> INITIATIVES</a></li>
+        <li><a href="#experience" class="mobile-nav-link"><span>04</span> SIMULATION LAB</a></li>
+        <li><a href="#recruitment-form-section" class="mobile-nav-link"><span>05</span> ENLIST NOW</a></li>
+      </ul>
+      <a href="#recruitment-form-section" class="btn btn-primary btn-lg" style="width: 100%;">
+        JOIN THE AVENGERS ↗
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         SECTION 3: HERO SECTION — THE CINEMATIC FIRST IMPRESSION
+         ========================================================================== -->
+    <section class="hero-section" id="home" aria-label="Hero Section">
+      <div class="container hero-grid">
+        <!-- Left: Oversized Headline & Copy -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="live-pulse" aria-hidden="true"></span>
+            <span>S.T.A.R. INITIATIVE // CAMPUS RECRUITMENT OPEN</span>
+          </div>
+
+          <h1 class="hero-headline">
+            NOT EVERY <span class="hero-highlight">HERO</span> WEARS A CAPE.
+          </h1>
+
+          <p class="hero-supporting">
+            Think bigger. Build boldly. Make an impact. Join a community of creators, innovators, leaders, and future changemakers who believe the extraordinary starts on campus.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#recruitment-form-section" class="btn btn-primary btn-lg">
+              <span>JOIN THE AVENGERS</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="#mission" class="btn btn-outline btn-lg">
+              <span>EXPLORE OUR MISSION ↓</span>
+            </a>
+          </div>
+
+          <!-- Three Compact Stats -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-card">
+              <div class="hero-stat-number">120<span>+</span></div>
+              <div class="hero-stat-label">FUTURE CHANGEMAKERS</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-number">08<span></span></div>
+              <div class="hero-stat-label">ACTIVE INITIATIVES</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-number">01<span></span></div>
+              <div class="hero-stat-label">UNITED COMMUNITY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Dramatic 3D Arc-Reactor Command Visual -->
+        <div class="hero-visual-wrap" aria-label="Holographic Arc Reactor Engine">
+          <div class="reactor-stage" id="hero-reactor-stage">
+            <!-- Floating System Status Labels -->
+            <div class="floating-hud-badge badge-pos-top" aria-label="Status: Recruitment Open">
+              <div class="hud-badge-icon">⚡</div>
+              <div class="hud-badge-content">
+                <span class="hud-badge-title">SYSTEM STATUS</span>
+                <span class="hud-badge-value">RECRUITMENT: OPEN</span>
+              </div>
+            </div>
+
+            <div class="floating-hud-badge badge-pos-bottom" aria-label="Earth Status: Building The Future">
+              <div class="hud-badge-icon">🌍</div>
+              <div class="hud-badge-content">
+                <span class="hud-badge-title">EARTH STATUS</span>
+                <span class="hud-badge-value">BUILDING THE FUTURE</span>
+              </div>
+            </div>
+
+            <!-- Bespoke High-Resolution Arc-Reactor SVG Core -->
+            <svg class="reactor-svg-container" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="reactorGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#65F6FF" stop-opacity="0.9"/>
+                  <stop offset="35%" stop-color="#00D9FF" stop-opacity="0.5"/>
+                  <stop offset="70%" stop-color="#07090F" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#07090F" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00D9FF"/>
+                  <stop offset="50%" stop-color="#FF3547"/>
+                  <stop offset="100%" stop-color="#65F6FF"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Outer Tech Reticle Rings -->
+              <circle cx="250" cy="250" r="235" stroke="#00D9FF" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="8 6"/>
+              <circle cx="250" cy="250" r="220" stroke="#FF3547" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="14 10"/>
+              <circle cx="250" cy="250" r="200" stroke="#65F6FF" stroke-width="1" stroke-opacity="0.5"/>
+
+              <!-- Segmented Radial Copper Coils / Repulsor Fins -->
+              <g transform="rotate(0 250 250)">
+                <rect x="242" y="55" width="16" height="42" rx="4" fill="#0D1321" stroke="#00D9FF" stroke-width="2"/>
+                <rect x="242" y="403" width="16" height="42" rx="4" fill="#0D1321" stroke="#00D9FF" stroke-width="2"/>
+                <rect x="55" y="242" width="42" height="16" rx="4" fill="#0D1321" stroke="#00D9FF" stroke-width="2"/>
+                <rect x="403" y="242" width="42" height="16" rx="4" fill="#0D1321" stroke="#00D9FF" stroke-width="2"/>
+                <!-- Diagonal Coils -->
+                <rect x="110" y="110" width="35" height="16" rx="4" transform="rotate(45 127 118)" fill="#0D1321" stroke="#65F6FF" stroke-width="2"/>
+                <rect x="355" y="110" width="35" height="16" rx="4" transform="rotate(-45 372 118)" fill="#0D1321" stroke="#65F6FF" stroke-width="2"/>
+                <rect x="110" y="355" width="35" height="16" rx="4" transform="rotate(-45 127 363)" fill="#0D1321" stroke="#65F6FF" stroke-width="2"/>
+                <rect x="355" y="355" width="35" height="16" rx="4" transform="rotate(45 372 363)" fill="#0D1321" stroke="#65F6FF" stroke-width="2"/>
+              </g>
+
+              <!-- Central Arc Housing -->
+              <circle cx="250" cy="250" r="145" stroke="#00D9FF" stroke-width="4" stroke-opacity="0.7"/>
+              <circle cx="250" cy="250" r="130" fill="url(#reactorGlow)"/>
+              <circle cx="250" cy="250" r="105" stroke="#65F6FF" stroke-width="3" stroke-dasharray="16 8"/>
+
+              <!-- Triangular Vibranium Core / Avengers Insignia -->
+              <polygon points="250,165 320,290 180,290" fill="#07090F" stroke="#00D9FF" stroke-width="3"/>
+              <circle cx="250" cy="248" r="38" fill="#65F6FF" opacity="0.9" filter="drop-shadow(0 0 20px #00D9FF)"/>
+              <!-- Chevron Inlay -->
+              <polygon points="250,185 300,280 200,280" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+              <circle cx="250" cy="248" r="12" fill="#FFFFFF"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#mission" class="hero-scroll-indicator" aria-label="Scroll to mission section">
+        <span>SCROLL DOWN</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: OUR MISSION — WHY WE EXIST (01 // THE DIRECTIVE)
+         ========================================================================== -->
+    <section class="mission-section" id="mission" aria-label="Our Mission Section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">
+            <span class="status-dot"></span>
+            01 // THE DIRECTIVE
+          </div>
+          <h2 class="section-title">A DIFFERENT KIND OF SUPERPOWER.</h2>
+          <p class="section-description">
+            We believe every student has something extraordinary to contribute. Our mission is to turn curiosity into capability, ideas into action, and individuals into an unstoppable team.
+          </p>
+        </div>
+
+        <!-- Three Premium Feature Panels -->
+        <div class="mission-panels-grid">
+          <!-- Panel 1: INNOVATION LAB -->
+          <div class="mission-panel hud-corner-box">
+            <div class="mission-panel-icon-wrap" aria-hidden="true">
+              <!-- Custom Reactor/Atom Icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(90 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(150 12 12)"></ellipse>
+              </svg>
+            </div>
+            <h3 class="mission-panel-title">INNOVATION LAB</h3>
+            <p class="mission-panel-desc">
+              Experiment, prototype, code, and transform ambitious ideas into things that actually work. Access cloud compute grants, 3D printing equipment, and hackathon incubation sprints.
+            </p>
+            <div class="mission-panel-tags">
+              <span class="mission-tag">TECHNOLOGY</span>
+              <span class="mission-tag">CREATIVITY</span>
+              <span class="mission-tag">BUILDING</span>
+            </div>
+          </div>
+
+          <!-- Panel 2: IMPACT INITIATIVE -->
+          <div class="mission-panel panel-impact hud-corner-box">
+            <div class="mission-panel-icon-wrap" aria-hidden="true">
+              <!-- Custom Lightning/Target Icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="22"></line>
+                <line x1="2" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="22" y2="12"></line>
+                <path d="M13 7l-3 5h4l-2 5"></path>
+              </svg>
+            </div>
+            <h3 class="mission-panel-title">IMPACT INITIATIVE</h3>
+            <p class="mission-panel-desc">
+              Collaborate on meaningful projects, solve real campus challenges, and create a positive impact beyond the classroom. From accessible campus wayfinding to youth STEM mentoring.
+            </p>
+            <div class="mission-panel-tags">
+              <span class="mission-tag">LEADERSHIP</span>
+              <span class="mission-tag">COMMUNITY</span>
+              <span class="mission-tag">ACTION</span>
+            </div>
+          </div>
+
+          <!-- Panel 3: ALLIANCE NETWORK -->
+          <div class="mission-panel panel-alliance hud-corner-box">
+            <div class="mission-panel-icon-wrap" aria-hidden="true">
+              <!-- Custom Shield/Users Icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"></path>
+                <path d="M6 18c0-2 2-3 6-3s6 1 6 3"></path>
+              </svg>
+            </div>
+            <h3 class="mission-panel-title">ALLIANCE NETWORK</h3>
+            <p class="mission-panel-desc">
+              Meet ambitious people, find mentors, share knowledge, and grow alongside a community that pushes you forward. Forge lifelong camaraderie across disciplines and graduation classes.
+            </p>
+            <div class="mission-panel-tags">
+              <span class="mission-tag">NETWORKING</span>
+              <span class="mission-tag">TEAMWORK</span>
+              <span class="mission-tag">GROWTH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: THE TEAM — MEET YOUR AVENGERS (02 // PERSONNEL DATABASE)
+         ========================================================================== -->
+    <section class="team-section" id="team" aria-label="Personnel Database Section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">
+            <span class="status-dot"></span>
+            02 // PERSONNEL DATABASE
+          </div>
+          <h2 class="section-title">LEGENDS ARE BUILT TOGETHER.</h2>
+          <p class="section-description">
+            Different talents. Different perspectives. One shared mission. Meet the student leaders spearheading campus operations.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="team-filter-bar" id="team-filter-container">
+          <!-- Dynamically populated or static -->
+        </div>
+
+        <!-- 6 Student Leaders Grid -->
+        <div class="team-grid" id="team-grid-container">
+          <!-- Populated by js/team-dossier.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: INITIATIVES — CHOOSE YOUR MISSION (03 // ACTIVE OPERATIONS)
+         ========================================================================== -->
+    <section class="initiatives-section" id="initiatives" aria-label="Initiatives Section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label label-crimson">
+            <span class="status-dot"></span>
+            03 // ACTIVE OPERATIONS
+          </div>
+          <h2 class="section-title">FIND YOUR REASON TO SUIT UP.</h2>
+          <p class="section-description">
+            Every collegiate operative chooses their battlefield. Explore our four active operational theatres and find where your superpowers belong.
+          </p>
+        </div>
+
+        <!-- 4 Operations Grid -->
+        <div class="operations-grid" id="operations-grid-container">
+          <!-- Populated by js/initiatives.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 15: INTERACTIVE EXPERIENCE HUB (COMPETITION-WINNING FEATURE)
+         Hero Aptitude Scanner & Mjolnir Worthiness Test
+         ========================================================================== -->
+    <section class="experience-hub-section" id="experience" aria-label="Interactive Experience Hub">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">
+            <span class="status-dot"></span>
+            SIMULATION LAB // INTERACTIVE PROTOCOLS
+          </div>
+          <h2 class="section-title">CALIBRATE YOUR POTENTIAL.</h2>
+          <p class="section-description">
+            Engage with our biometric aptitude diagnostics or test your resolve in the Asgardian Worthiness Chamber.
+          </p>
+        </div>
+
+        <div class="interactive-experience-tabs">
+          <button type="button" class="experience-tab-btn active" data-target="panel-aptitude">
+            🎯 HERO APTITUDE PROTOCOL
+          </button>
+          <button type="button" class="experience-tab-btn" data-target="panel-mjolnir">
+            ⚡ MJOLNIR WORTHINESS TEST
+          </button>
+        </div>
+
+        <!-- Panel 1: Hero Aptitude Protocol Scanner -->
+        <div class="experience-panel active hud-corner-box" id="panel-aptitude">
+          <div id="aptitude-quiz-container">
+            <!-- Populated by js/quiz.js -->
+          </div>
+        </div>
+
+        <!-- Panel 2: Mjolnir Worthiness Chamber -->
+        <div class="experience-panel hud-corner-box" id="panel-mjolnir">
+          <div class="worthiness-chamber">
+            <div class="section-label label-crimson" style="margin-bottom: 1rem;">
+              <span class="status-dot"></span>
+              ODINFORCE BIOMETRIC FIELD
+            </div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.6rem;">ARE YOU WORTHY?</h3>
+            <p style="color: #98A5B8; max-width: 520px; margin: 0 auto 2rem auto;">
+              Press and hold the repulsor grip below to channel your collegiate leadership energy into Mjolnir.
+            </p>
+
+            <!-- Hammer SVG -->
+            <svg class="hammer-visual" id="mjolnir-hammer" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="35" y="25" width="50" height="30" rx="4" fill="#0D1321" stroke="#00D9FF" stroke-width="3"/>
+              <line x1="60" y1="55" x2="60" y2="105" stroke="#98A5B8" stroke-width="7" stroke-linecap="round"/>
+              <rect x="54" y="60" width="12" height="35" fill="none" stroke="#FFB800" stroke-width="2" stroke-dasharray="3 3"/>
+              <!-- Runes -->
+              <circle cx="60" cy="40" r="8" stroke="#65F6FF" stroke-width="1.5" stroke-dasharray="4 2"/>
+            </svg>
+
+            <!-- Charge Meter -->
+            <div class="worthiness-meter-container">
+              <div class="worthiness-meter-fill" id="worthiness-meter-fill"></div>
+            </div>
+
+            <div id="worthiness-status" style="font-family: monospace; font-size: 0.85rem; color: #00D9FF; margin-bottom: 1.8rem; min-height: 24px;">
+              Ready for biometric calibration. Press and hold below.
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg" id="mjolnir-lift-btn">
+              <span>HOLD TO LIFT MJOLNIR</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: RECRUITMENT PROCESS — YOUR ORIGIN STORY (04 // INITIATION PROTOCOL)
+         ========================================================================== -->
+    <section class="protocol-section" id="protocol" aria-label="Recruitment Process Section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">
+            <span class="status-dot"></span>
+            04 // INITIATION PROTOCOL
+          </div>
+          <h2 class="section-title">EVERY HERO STARTS SOMEWHERE.</h2>
+          <p class="section-description">
+            Your origin story doesn't begin in a laboratory accident. It begins with one simple decision to explore what you're capable of.
+          </p>
+        </div>
+
+        <!-- Reassurance Banner -->
+        <div class="reassurance-banner">
+          <span class="reassurance-icon">🛡️</span>
+          <span class="reassurance-text">
+            “No superpowers required. Curiosity, commitment, and a willingness to learn are enough.”
+          </span>
+        </div>
+
+        <!-- Horizontal Desktop / Vertical Mobile Timeline -->
+        <div class="timeline-track-wrap">
+          <div class="timeline-connecting-bar" aria-hidden="true"></div>
+          <div class="timeline-grid">
+            <!-- Step 1 -->
+            <div class="timeline-step-card hud-corner-box">
+              <div class="step-node-header">
+                <div class="step-number-circle">01</div>
+                <div class="step-meta-code">PHASE // DISCOVER</div>
+              </div>
+              <h3 class="step-title">STEP 01 — DISCOVER</h3>
+              <p class="step-desc">
+                Explore the club, attend our open campus demo day or Thursday evening assembly, and discover where your unique interests and talents fit.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step-card hud-corner-box">
+              <div class="step-node-header">
+                <div class="step-number-circle">02</div>
+                <div class="step-meta-code">PHASE // APPLY</div>
+              </div>
+              <h3 class="step-title">STEP 02 — APPLY</h3>
+              <p class="step-desc">
+                Complete our short recruitment form below. Tell us what excites you, which projects ignite your curiosity, and what you hope to build.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step-card hud-corner-box">
+              <div class="step-node-header">
+                <div class="step-number-circle">03</div>
+                <div class="step-meta-code">PHASE // CONNECT</div>
+              </div>
+              <h3 class="step-title">STEP 03 — CONNECT</h3>
+              <p class="step-desc">
+                Meet the executive council for an informal 15-minute coffee chat or lab walk. Share your aspirations, ask questions, and discover your strengths.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step-card hud-corner-box">
+              <div class="step-node-header">
+                <div class="step-number-circle">04</div>
+                <div class="step-meta-code">PHASE // ASSEMBLE</div>
+              </div>
+              <h3 class="step-title">STEP 04 — ASSEMBLE</h3>
+              <p class="step-desc">
+                Receive your official digital S.H.I.E.L.D. Cadet Credentials, join your divisional squadron on Discord, and begin your very first campus mission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: RECRUITMENT FORM — MAKE IT FUNCTIONAL
+         ========================================================================== -->
+    <section class="recruitment-section" id="recruitment-form-section" aria-label="Recruitment Application Section">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header text-center">
+          <div class="section-label label-crimson">
+            <span class="status-dot"></span>
+            05 // SECURE TRANSMISSION PORTAL
+          </div>
+          <h2 class="section-title">YOUR TEAM IS WAITING.</h2>
+          <p class="section-description">
+            Your next chapter starts with one decision. Tell us a little about yourself.
+          </p>
+        </div>
+
+        <div class="form-wrapper-card hud-corner-box" id="recruitment-form-card">
+          <!-- Active Form -->
+          <form id="recruitment-form" novalidate>
+            <div class="form-grid-layout">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="full-name" class="form-label">
+                  <span>Full Legal / Preferred Name</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <input type="text" id="full-name" class="form-control" placeholder="e.g. Peter Parker" required autocomplete="name">
+                <div class="field-error-message" id="error-name"></div>
+              </div>
+
+              <!-- College Email -->
+              <div class="form-group">
+                <label for="college-email" class="form-label">
+                  <span>College Email Address</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <input type="email" id="college-email" class="form-control" placeholder="e.g. pparker@mit.student.edu" required autocomplete="email">
+                <div class="field-error-message" id="error-email"></div>
+              </div>
+
+              <!-- Department or Major -->
+              <div class="form-group">
+                <label for="major-department" class="form-label">
+                  <span>Department or Major</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <input type="text" id="major-department" class="form-control" placeholder="e.g. Computer Science, Design, Physics" required>
+                <div class="field-error-message" id="error-major"></div>
+              </div>
+
+              <!-- Academic Year -->
+              <div class="form-group">
+                <label for="academic-year" class="form-label">
+                  <span>Current Academic Year</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <select id="academic-year" class="form-control" required>
+                  <option value="" disabled selected>Select your standing...</option>
+                  <option value="Freshman">Freshman (Class of 2030)</option>
+                  <option value="Sophomore">Sophomore (Class of 2029)</option>
+                  <option value="Junior">Junior (Class of 2028)</option>
+                  <option value="Senior">Senior (Class of 2027)</option>
+                  <option value="Graduate">Graduate / Master's Student</option>
+                </select>
+                <div class="field-error-message" id="error-year"></div>
+              </div>
+
+              <!-- Areas of Interest (Multi-Select Chips) -->
+              <div class="form-group form-col-full">
+                <label class="form-label">
+                  <span>Areas of Interest (Select all that excite you)</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <div class="interest-chips-grid">
+                  <button type="button" class="interest-chip-btn" data-value="Technology & Development">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Technology & Dev</span>
+                  </button>
+                  <button type="button" class="interest-chip-btn" data-value="Creative & Design">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Creative & Design</span>
+                  </button>
+                  <button type="button" class="interest-chip-btn" data-value="Leadership & Operations">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Leadership & Ops</span>
+                  </button>
+                  <button type="button" class="interest-chip-btn" data-value="Community Outreach">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Community Outreach</span>
+                  </button>
+                  <button type="button" class="interest-chip-btn" data-value="Events & Logistics">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Events & Logistics</span>
+                  </button>
+                  <button type="button" class="interest-chip-btn" data-value="Research & Innovation">
+                    <span class="chip-checkbox">✓</span>
+                    <span>Research & Innovation</span>
+                  </button>
+                </div>
+                <div class="field-error-message" id="error-interests"></div>
+              </div>
+
+              <!-- Skills & Talents -->
+              <div class="form-group form-col-full">
+                <label for="skills-talents" class="form-label">
+                  <span>Skills, Tools, or Superpowers</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <input type="text" id="skills-talents" class="form-control" placeholder="e.g. Python, Figma, 3D Modeling, Public Speaking, Event Management, Video Editing" required>
+                <div class="field-error-message" id="error-skills"></div>
+              </div>
+
+              <!-- Why do you want to join? -->
+              <div class="form-group form-col-full">
+                <label for="join-statement" class="form-label">
+                  <span>Why do you want to join the Avengers Club?</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <textarea id="join-statement" class="form-control" placeholder="Tell us about your passions, what impact you want to create on campus, or what you hope to learn with our team..." required></textarea>
+                <div class="field-error-message" id="error-statement"></div>
+              </div>
+
+              <!-- Optional Portfolio/GitHub -->
+              <div class="form-group form-col-full">
+                <label for="portfolio-url" class="form-label">
+                  <span>Portfolio, GitHub, or LinkedIn URL (Optional)</span>
+                </label>
+                <input type="url" id="portfolio-url" class="form-control" placeholder="https://github.com/yourusername or https://yourportfolio.dev">
+              </div>
+
+              <!-- Consent Checkbox -->
+              <div class="form-group form-col-full">
+                <label class="consent-container">
+                  <input type="checkbox" id="consent-checkbox" required>
+                  <span>
+                    I confirm my availability for club activities and authorize the Avengers Recruitment Council to contact me regarding initiation protocols and campus syncs.
+                  </span>
+                </label>
+                <div class="field-error-message" id="error-consent"></div>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions-row">
+              <div class="demo-status-notice">
+                <span class="demo-status-indicator"></span>
+                <span>DEMO MODE: Secure Local Transmission Active</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" id="recruitment-submit-btn">
+                <span>SUBMIT APPLICATION ↗</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success State View: Custom Transmission Received & Cadet Credential Badge -->
+          <div class="transmission-success-view" id="transmission-success-view">
+            <div class="success-reactor-pulse" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <h3 class="success-headline">TRANSMISSION RECEIVED.</h3>
+            <p class="success-supporting">
+              “Your application has entered the recruitment system. Stay curious. Stay ready.”
+            </p>
+
+            <!-- Interactive Digital S.H.I.E.L.D. Cadet Credential Badge -->
+            <div class="cadet-badge-card" id="cadet-badge-card">
+              <div class="badge-header-row">
+                <div class="badge-agency-title">S.H.I.E.L.D. // AVENGERS INITIATIVE</div>
+                <div class="badge-clearance-code" id="badge-clearance-code">LEVEL 01 // CADET</div>
+              </div>
+              <div class="badge-body-content">
+                <div class="badge-avatar-box">⚡</div>
+                <div class="badge-details-list">
+                  <div class="badge-cadet-name" id="badge-cadet-name">Cadet Operative</div>
+                  <div class="badge-cadet-id" id="badge-cadet-id">CADET-000000</div>
+                  <div class="badge-cadet-division" id="badge-cadet-division">Primary Interest: Technology</div>
+                </div>
+              </div>
+              <div class="badge-footer-barcode">
+                <span id="badge-timestamp">TRANSMITTED: 2026-10-27</span>
+                <span>SECURE HASH: 8F2A-991C</span>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-cyan" id="btn-print-badge">
+                <span>PRINT / SAVE CADET BADGE</span>
+              </button>
+              <button type="button" class="btn btn-outline" id="btn-reset-application">
+                <span>TRANSMIT ANOTHER APPLICATION</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Link to Live Transmissions Roster for Competition Judges -->
+        <div style="text-align: center; margin-top: 1.8rem;">
+          <button type="button" class="btn btn-sm btn-outline-cyan" id="btn-open-roster">
+            <span>DATABASE // VIEW CADET TRANSMISSIONS LOG</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: FINAL CTA — THE AVENGERS ASSEMBLE MOMENT
+         ========================================================================== -->
+    <section class="final-cta-section" aria-label="Final Call to Action">
+      <!-- Rotating Background Emblem -->
+      <svg class="final-cta-backdrop" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="250" cy="250" r="240" stroke="#00D9FF" stroke-width="2" stroke-dasharray="10 8"/>
+        <circle cx="250" cy="250" r="190" stroke="#FF3547" stroke-width="2" stroke-dasharray="20 12"/>
+        <polygon points="250,50 415,350 85,350" stroke="#65F6FF" stroke-width="2" fill="none"/>
+      </svg>
+
+      <div class="container final-cta-content">
+        <div class="cta-emblem-icon">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="#00D9FF" stroke-width="3" stroke-dasharray="6 4"/>
+            <polygon points="50,15 78,75 62,75 56,60 44,60 38,75 22,75" fill="#00D9FF"/>
+            <polygon points="46,54 54,54 50,42" fill="#07090F"/>
+          </svg>
+        </div>
+
+        <h2 class="final-cta-headline">THE WORLD WON'T CHANGE ITSELF.</h2>
+        <p class="final-cta-supporting">
+          Your ideas matter. Your skills matter. The people you meet here might change your future. It's time to find out what we can build together.
+        </p>
+
+        <div class="final-cta-actions">
+          <a href="#recruitment-form-section" class="btn btn-primary btn-lg">
+            <span>ASSEMBLE WITH US ↗</span>
+          </a>
+          <a href="#mission" class="btn btn-outline btn-lg">
+            <span>EXPLORE THE MISSION ↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 10: FOOTER — TRANSMISSION ENDS
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Col -->
+        <div class="footer-brand-col">
+          <a href="#home" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <div class="brand-titles">
+              <span class="brand-wordmark">AVENGERS<span>CLUB</span></span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            “Different strengths. One extraordinary team.”
+          </p>
+          <div class="footer-campus-badge">
+            <span>🏛️ Metropolis Institute of Technology // Student Chapter 104</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">NAVIGATION</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home" class="footer-nav-link">Home Terminal</a></li>
+            <li><a href="#mission" class="footer-nav-link">Our Mission & Directive</a></li>
+            <li><a href="#team" class="footer-nav-link">Personnel Database</a></li>
+            <li><a href="#initiatives" class="footer-nav-link">Active Operations</a></li>
+            <li><a href="#recruitment-form-section" class="footer-nav-link">Enlistment Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Channels -->
+        <div>
+          <h4 class="footer-col-title">CHANNELS</h4>
+          <ul class="footer-social-list">
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-link">GitHub // Open Source</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="footer-social-link">Discord // Cadet Comms</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link">LinkedIn // Alumni Network</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link">Instagram // Campus Highlights</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-status-text">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: READY FOR RECRUITS.</span>
+        </div>
+        <div class="footer-copyright">
+          © <span id="current-year">2026</span> AVENGERS CLUB. S.T.A.R. Collegiate Initiative.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: PERSONNEL DOSSIER MODAL (ACCESSIBLE DIALOG)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="dossier-modal" role="dialog" aria-modal="true" aria-labelledby="dossier-name">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Personnel Dossier">✕</button>
+      <div class="modal-header-bar">
+        <span class="modal-security-stamp">S.H.I.E.L.D. CLASSIFIED // PERSONNEL DOSSIER</span>
+      </div>
+      <div class="modal-body">
+        <div class="dossier-layout-top">
+          <div class="dossier-photo-frame">
+            <div id="dossier-avatar-icon" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">⚡</div>
+          </div>
+          <div class="dossier-identity">
+            <h3 class="dossier-name" id="dossier-name">Arjun Mehta</h3>
+            <div class="dossier-callsign" id="dossier-callsign">THE STRATEGIST</div>
+            <div style="font-size: 0.85rem; color: #98A5B8; margin-top: 0.2rem;" id="dossier-division">Command & Operations</div>
+          </div>
+        </div>
+
+        <div class="dossier-specs-list">
+          <div class="dossier-spec-item">
+            <span class="dossier-spec-label">Clearance Level</span>
+            <span class="dossier-spec-val" id="dossier-clearance">LEVEL 08</span>
+          </div>
+        </div>
+
+        <div class="dossier-bio-heading">BIOGRAPHICAL DIRECTIVE</div>
+        <p class="dossier-bio-text" id="dossier-bio"></p>
+
+        <div class="dossier-bio-heading">CORE CAPABILITY METRICS</div>
+        <div id="dossier-stats-list" style="margin-bottom: 1.8rem;"></div>
+
+        <div class="dossier-bio-heading">FIELD BADGES</div>
+        <div id="dossier-badges-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: TACTICAL MISSION BRIEFING MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="mission-modal" role="dialog" aria-modal="true" aria-labelledby="mission-modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Mission Briefing">✕</button>
+      <div class="modal-header-bar">
+        <span class="modal-security-stamp" id="mission-modal-badge">TACTICAL BRIEFING</span>
+        <span style="font-family: monospace; font-size: 0.75rem; color: #98A5B8;" id="mission-modal-code">OPERATION: IGNITE</span>
+      </div>
+      <div class="modal-body">
+        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;" id="mission-modal-title">Mission Title</h3>
+        
+        <div class="dossier-specs-list">
+          <div class="dossier-spec-item">
+            <span class="dossier-spec-label">Lead Operative</span>
+            <span class="dossier-spec-val" id="mission-modal-lead">Maya Sharma</span>
+          </div>
+          <div class="dossier-spec-item">
+            <span class="dossier-spec-label">Target Timeline</span>
+            <span class="dossier-spec-val" id="mission-modal-timeline">Fall 2026</span>
+          </div>
+        </div>
+
+        <div class="dossier-bio-heading">OPERATIONAL PARAMETERS & BRIEFING</div>
+        <p class="dossier-bio-text" id="mission-modal-briefing"></p>
+
+        <div class="dossier-bio-heading">SQUAD ROLES CURRENTLY NEEDED</div>
+        <div id="mission-modal-roles" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;"></div>
+
+        <button type="button" class="btn btn-primary" id="mission-enlist-cta-btn" style="width: 100%;">
+          <span>ENLIST FOR THIS MISSION ↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 3: CADET TRANSMISSIONS & ADMIN DATABASE
+       ========================================================================== -->
+  <div class="modal-backdrop" id="roster-modal" role="dialog" aria-modal="true" aria-labelledby="roster-modal-title">
+    <div class="modal-dialog" style="max-width: 900px;">
+      <button type="button" class="modal-close-btn" id="btn-close-roster" aria-label="Close Transmissions Log">✕</button>
+      <div class="modal-header-bar">
+        <span class="modal-security-stamp">S.H.I.E.L.D. MAINFRAME // SECURE CADET DATABASE</span>
+        <span class="mission-tag" id="roster-total-count" style="margin-left: auto;">0 OPERATIVES</span>
+      </div>
+      <div class="modal-body">
+        <h3 id="roster-modal-title" style="font-size: 1.6rem; margin-bottom: 0.5rem;">RECRUITMENT TRANSMISSION ARCHIVE</h3>
+        <p style="color: #98A5B8; font-size: 0.88rem; margin-bottom: 1.5rem;">
+          Real-time transmission logs saved to local encrypted vault. Inspect candidates, track submission dates, or export data.
+        </p>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="background: rgba(7,9,15,0.9); border-bottom: 1px solid rgba(0,217,255,0.2); font-family: monospace; font-size: 0.72rem; color: #00D9FF;">
+                <th style="padding: 0.75rem 1rem;">CADET ID</th>
+                <th style="padding: 0.75rem 1rem;">NAME & CONTACT</th>
+                <th style="padding: 0.75rem 1rem;">ACADEMIC STANDING</th>
+                <th style="padding: 0.75rem 1rem;">PRIMARY INTERESTS</th>
+                <th style="padding: 0.75rem 1rem;">INTAKE STATUS</th>
+                <th style="padding: 0.75rem 1rem;">TIMESTAMP</th>
+              </tr>
+            </thead>
+            <tbody id="roster-table-body">
+              <!-- Populated by js/admin.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.8rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn-sm btn-outline" id="btn-clear-roster">
+            RESET TO DEFAULT SEED
+          </button>
+          <button type="button" class="btn btn-sm btn-cyan" id="btn-export-roster">
+            EXPORT TRANSMISSIONS JSON ↗
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 15: F.R.I.D.A.Y. / JARVIS CAMPUS AI HUD ASSISTANT WIDGET
+       ========================================================================== -->
+  <div class="jarvis-widget-bubble" id="jarvis-widget">
+    <button type="button" class="jarvis-bubble-trigger" id="jarvis-toggle-btn" aria-label="Open F.R.I.D.A.Y. Campus AI Assistant">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="12" r="4"></circle>
+        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+        <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- F.R.I.D.A.Y. Chat Drawer -->
+  <div class="jarvis-panel-drawer" id="jarvis-panel" role="region" aria-label="F.R.I.D.A.Y. AI Chat Panel">
+    <div class="jarvis-panel-header">
+      <div class="jarvis-title-group">
+        <span class="jarvis-pulse-core" aria-hidden="true"></span>
+        <span class="jarvis-title-text">F.R.I.D.A.Y. // CAMPUS LIAISON AI</span>
+      </div>
+      <button type="button" id="jarvis-close-btn" style="background: none; border: none; color: #98A5B8; cursor: pointer;" aria-label="Close Assistant">✕</button>
+    </div>
+
+    <div class="jarvis-messages-area" id="jarvis-messages">
+      <div class="jarvis-msg bot">
+        <strong>F.R.I.D.A.Y. //</strong> Greetings, collegiate operative. All systems are nominal and recruitment channels are fully open. How may I assist your enrollment today?
+      </div>
+    </div>
+
+    <!-- Quick Question Chips -->
+    <div class="jarvis-quick-chips">
+      <button type="button" class="jarvis-chip" data-query="Do I need superpowers?">No superpowers?</button>
+      <button type="button" class="jarvis-chip" data-query="When are meetings?">Meeting times?</button>
+      <button type="button" class="jarvis-chip" data-query="What are the club dues?">Any fees?</button>
+      <button type="button" class="jarvis-chip" data-query="Who are the team leaders?">Meet Leaders</button>
+    </div>
+
+    <div class="jarvis-input-bar">
+      <input type="text" id="jarvis-input" placeholder="Ask F.R.I.D.A.Y. a question..." aria-label="Chat query input">
+      <button type="button" class="jarvis-send-btn" id="jarvis-send-btn" aria-label="Send query">SEND</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/reactor.js"></script>
+  <script src="js/team-dossier.js"></script>
+  <script src="js/initiatives.js"></script>
+  <script src="js/recruitment.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/mjolnir.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/jarvis.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
